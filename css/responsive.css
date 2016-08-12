@@ -1,0 +1,36 @@
+@media screen and (max-width:1199px){
+	header .nav #menu li a{
+		padding: 8px 15px;
+    	margin: 0 5px;
+    	font-size: 13px;
+	}
+	header .nav #menu{
+		margin-top: 10px;
+	}
+	header .contact {
+	    margin-top: 7px;
+	}
+	.client .client-text {
+	    font-size: 23px;
+	}
+}
+@media screen and (max-width:991px){
+	header .nav #menu{
+		display: none;
+	}
+	header .mobile-menu{
+		display: block;
+	}
+	.see-presentation{
+		font-size: 16px;
+	}
+	.see-presentation .see-content .see-close{
+		margin-top: -17px;
+	}
+	header .contact{
+		position: relative;
+	    margin-top: -45px;
+	    margin-right: 70px;
+	    z-index: 999;
+	}
+}

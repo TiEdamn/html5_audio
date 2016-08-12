@@ -1,0 +1,133 @@
+@font-face {
+font-family: 'Etelka Text Pro';
+font-style: normal;
+font-weight: normal;
+src: local('Etelka Text Pro'), url('../fonts/Etelka-Text-Pro.woff') format('woff');
+}
+@font-face {
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica'), url('../fonts/helveticaneuecyr-light.woff') format('woff');
+}
+@font-face {
+font-family: 'Helvetica-ultra';
+font-style: normal;
+font-weight: normal;
+letter-spacing: 1px;
+src: local('Helvetica'), url('../fonts/helveticaneuecyr-ultralight.woff') format('woff');
+}
+::-moz-selection{
+	background: #ff0000;
+	color: #fff;
+}
+::selection{
+	background: #ff0000;
+	color: #fff;
+}
+html,body{
+	padding:0;
+	margin:0;
+	height:100%;
+	width: 100%;
+	font-family: 'Etelka Text Pro', 'Helvetica-ultra', 'Helvetica';
+    background: #000;
+}
+.no-canvas #bg-animation{
+	display: none;
+}
+#bg-animation{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+table{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+table td{
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+}
+table td img{
+	max-width: 20%;
+	margin-right:20px;
+	display: inline-block;
+}
+table td div{
+	display: inline-block;
+	vertical-align: top;
+}
+table td h1{
+	margin: 15px 0 5px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+table td h2{
+	text-align: left;
+    font-weight: 400;
+    margin-top: 10px;
+	letter-spacing: 1px;
+}
+.audio-control{
+	background: url(../music/music.png);
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	top: 10px;
+    right: 10px;
+    z-index: 3;
+	cursor: pointer;
+	border: 0;
+	outline: none;
+	background-position: 0 0;
+}
+.no-audio .audio-control{
+	display: none;
+}
+.audio-control:hover{
+	background-position: 50px 0;
+}
+.audio-control.paused{
+	background-position: 0 50px;
+}
+.audio-control.paused:hover{
+	background-position: 50px 50px;
+}
+@media screen and (max-width:1200px){
+	table td h1{
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width:1100px){
+	table td img{
+		max-width: 30%;
+		min-width: 300px;
+		margin: 0 auto;
+		display: block;
+	}
+	table td h1{
+		margin: 15px;
+		text-align: center;
+	}
+	table td h2{
+		text-align: center;
+	}
+}
+@media screen and (max-width:768px){
+	table td h1{
+		font-size: 20px
+	}
+	table td h2{
+		font-size: 17px;
+	}
+	.audio-control{
+		//display: none;
+	}
+}
